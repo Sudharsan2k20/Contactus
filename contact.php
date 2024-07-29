@@ -3,6 +3,8 @@
 <head>
 <title>Contactus</title>
 <link rel="stylesheet" href="assets/contactstyles.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="contact.js"></script>
 </head>
 <body>
 
@@ -32,23 +34,20 @@
         <div class="screen-body-item">
           <div class="app-form">
             <div class="app-form-group">
-              <input class="app-form-control" placeholder="First Name" required>
+              <input class="app-form-control" id="fname" placeholder="First Name" required>
             </div>
             <div class="app-form-group">
-              <input class="app-form-control" placeholder="Last Name" required>
+              <input class="app-form-control" id="lname" placeholder="Last Name" required>
             </div>
             <div class="app-form-group">
-              <input class="app-form-control" placeholder="Email" required>
+              <input class="app-form-control" id="email" placeholder="Email" required>
             </div>
             <div class="app-form-group">
-              <input class="app-form-control" placeholder="Contact no" required>
-            </div>
-            <div class="app-form-group message">
-              <input class="app-form-control" placeholder="Message">
+              <input class="app-form-control" id="number" placeholder="Contact no" required>
             </div>
             <div class="app-form-group buttons">
               <button class="app-form-button">CANCEL</button>
-              <button class="app-form-button">SEND</button>
+              <button class="app-form-button" id="send">SEND</button>
             </div>
           </div>
         </div>
@@ -56,7 +55,9 @@
     </div>
   </div>
 </div>
-
+<script>
+  
+</script>
 
 </body>
 </html>
