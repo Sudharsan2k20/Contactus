@@ -4,6 +4,7 @@
 <title>Contactus</title>
 <link rel="stylesheet" href="assets/contactstyles.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src = "https://ajax.googleapis.com/ajax/libs/jQuery/3.7.1/jQuery.min.js"></script>
 <script src="contact.js"></script>
 </head>
 <body>
@@ -56,8 +57,33 @@
   </div>
 </div>
 <script>
-  
-</script>
+$(document).ready(function(){
+    $("#send").click(function(){
+      console.log("test");
+      var first_name = $("#fname").val();
+      var last_name = $("#lname").val();
+      var email = $("#email").val();
+      var phone = $("#number").val();
 
+      var fd = new object();
+      fd.append('fname', first_name);
+      fd.append('lname', last_name);
+      fd.append('email', email);
+      fd.append('phone', phone);
+
+      $.ajax(function(){
+        url:'function.php',
+        type: 'POST',
+        data: fd,
+        success: function(response){
+          console.log("Inserted successfully");
+        },
+        error: function(xhr, status, error){
+
+        }
+      });
+    })
+  })
+</script>
 </body>
 </html>
