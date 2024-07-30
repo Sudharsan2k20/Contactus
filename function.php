@@ -7,7 +7,7 @@ $email = mysqli_real_escape_string($conn,$_POST['email']);
 $number =$_POST['phone'];
 
 $stmt = $conn->prepare("INSERT INTO contacts(first_name, last_name, email, phone) values(?,?,?,?)");
-$stmt->bind_param("ssss", $fname, $lname, $email, $phone);
+$stmt->bind_param("ssss", $fname, $lname, $email, $number);
 if($stmt->execute()){
     echo "Inserted successfully";
 }
