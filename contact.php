@@ -5,6 +5,7 @@
 <link rel="stylesheet" href="assets/contactstyles.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <!-- <script src = "https://ajax.googleapis.com/ajax/libs/jQuery/3.7.1/jQuery.min.js"></script> -->
+<script src="api.js"></script>
 </head>
 <body>
 
@@ -56,36 +57,7 @@
   
 </div>
 <script>
-$(document).ready(function(){
-    $("#send").click(function(){
-      alert("hello");
-      console.log("test");
-      var first_name = $("#fname").val();
-      var last_name = $("#lname").val();
-      var email = $("#email").val();
-      var phone = $("#number").val();
 
-      var fd = new FormData();
-      fd.append('fname', first_name);
-      fd.append('lname', last_name);
-      fd.append('email', email);
-      fd.append('phone', phone);
-
-      $.ajax({
-        url:'function.php',
-        type: 'POST',
-        data: fd,
-        processData: false,
-        contentType: false,
-        success: function(response){
-          console.log("Inserted successfully");
-        },
-        error: function(xhr, status, error){
-          console.error("Error: " + error);
-        }
-      });
-    })
-  })
 </script>
 </body>
 </html>
