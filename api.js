@@ -21,7 +21,7 @@ $(document).ready(function(){
         contentType: false,
         success: function(response){
           console.log("Inserted successfully");
-          viewContents();
+          window.location.href='contents_view.php';
         },
         error: function(xhr, status, error){
           console.error("Error: " + error);

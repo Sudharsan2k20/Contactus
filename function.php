@@ -9,7 +9,7 @@ $number =$_POST['phone'];
 $stmt = $conn->prepare("INSERT INTO contacts(first_name, last_name, email, phone) values(?,?,?,?)");
 $stmt->bind_param("ssss", $fname, $lname, $email, $number);
 if($stmt->execute()){
-    echo "Inserted successfully";
+    echo "inserted";
 }
 else{
     echo "Error inserting values: " . $stmt->error;
