@@ -21,10 +21,27 @@ $(document).ready(function(){
         contentType: false,
         success: function(response){
           console.log("Inserted successfully");
+          viewContents();
         },
         error: function(xhr, status, error){
           console.error("Error: " + error);
         }
       });
     })
+
+    function viewContents(){
+      $.ajax({
+        url: 'contents_view.php',
+        type: 'GET',
+        data:'',
+        processData: false,
+        contentType: false,
+        success:function(response){
+          alert("Displayed");
+        },
+        error:function(xhr,status,error){
+          console.log("Error:" + error);
+        }
+      })
+    }
   })
