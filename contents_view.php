@@ -13,6 +13,7 @@ $result = mysqli_query($conn, $sql);
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="">
+        <script src="api.js"></script>
     </head>
     <body>
     <div class="container">
@@ -32,7 +33,7 @@ $result = mysqli_query($conn, $sql);
                     <td>".$row['last_name']."</td>
                     <td>".$row['email']."</td>
                     <td>".$row['phone']."</td>
-        
+                    <td><button>Delete</button></td>
                 </tr>";
             }
             echo"</table>";
